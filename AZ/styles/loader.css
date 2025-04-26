@@ -1,0 +1,61 @@
+/* أنماط اللودر المبسطة */
+
+/* أنماط شريط التقدم */
+.nprogress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: hsl(var(--primary));
+  z-index: 9999;
+  transition: width 0.3s ease;
+}
+
+/* أنماط دوران اللودر */
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+
+/* اللودر الدائري */
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: hsl(var(--primary));
+  animation: spinner 0.8s linear infinite;
+  margin: 0 auto;
+}
+
+.loading-spinner-light {
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: white;
+}
+
+/* لودر الأزرار */
+.button-spinner {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spinner 0.8s linear infinite;
+}
+
+/* لودر الصفحة الكاملة */
+.fullpage-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+}
